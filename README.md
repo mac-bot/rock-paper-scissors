@@ -9,5 +9,5 @@ The parameters:
 
 After this initial stage is complete and bug free, the next phase will be creating a user interface.
 
-wish me luck!
+Wish me luck!
     - Evan
