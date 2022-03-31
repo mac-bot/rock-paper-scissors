@@ -9,9 +9,8 @@
 <body>
     
     <script>
-    
+   
     const choices = ["Rock", "Paper", "Scissors"];
- 
  
     // Computer selects randomly from 3 moves
     function computerPlay () {
@@ -19,6 +18,24 @@
        return result;
     }
 
+    //One round of RPS
+    
+    function playerChoice() {
+       let result = prompt("Please Enter a choice");
+       return result;
+    } 
+    
+    function oneRound(playerChoice, computerPlay) {
+        if ((playerChoice === "Rock" && computerPlay === "Scissors") || (playerChoice === "Paper" && computerPlay === "Rock") || (playerChoice === "Scissors" && computerPlay === "Paper")) {
+            return `Computer played ${computerPlay}. You played ${playerChoice}. You win!`;
+        } else if ((playerChoice === "Scissors" && computerPlay === "Rock") || (playerChoice === "Rock" && computerPlay === "Paper") || (playerChoice === "Paper" && computerPlay === "Scissors")) {
+            return `You played ${playerChoice}. Computer played ${computerPlay}. Computer wins BOOOOOOOO!`;
+        }else if((playerChoice === "Rock" && computerPlay === "Rock") || (playerChoice === "Paper" && computerPlay === "Paper") || (playerChoice === "Scissors" && computerPlay === "Scissors")) {
+            return `You both played ${playerChoice}, so its a tie, losers`;
+        }
+    }
+   
+    console.log(oneRound(playerChoice(),computerPlay()));
 
 
 
@@ -28,9 +45,24 @@
 
 
 
-        // A prompt to ask User name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         // 2 players(User, Computer)
-       
+       // A function to ask User name, and choice
         // 3  possible moves(rock, paper, scissors)
         // 9 possible combinations of moves & results
             // rock(W vs. S, L vs. P, T vs. R)
